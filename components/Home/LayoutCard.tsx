@@ -3,10 +3,11 @@ import Image from "next/image";
 
 interface LayoutProps {
   isReversed?: boolean;
-  images?: string[] | string;
+    images?: string[] | string;
+    content?: string
 }
 
-export default function LayoutCard({ isReversed, images }: LayoutProps) {
+export default function LayoutCard({ isReversed, images,content }: LayoutProps) {
   return (
     <article>
       <div
@@ -15,14 +16,7 @@ export default function LayoutCard({ isReversed, images }: LayoutProps) {
           "items-center": Array.isArray(images) === false,
         })}>
         <p className="w-1/2">
-          Технологии обработки и укладки натурального камня, применяемые нашими
-          специалистами, продлевают срок службы, износостойкость и декоративные
-          качества материала. Например, каменный подоконник будет выглядеть
-          добротно и одновременно эстетично, если его правильно изготовить и
-          смонтировать. Природные материалы имеют огромную историю применения и
-          пользуются популярностью. Пример - натуральный фасадный камень. По
-          своим качествам он во многом превосходит даже самые дорогие элитные
-          современные материалы.{" "}
+         {content}
         </p>
         {Array.isArray(images) ? (
           <div className="grid grid-cols-3 w-1/2 gap-2">
