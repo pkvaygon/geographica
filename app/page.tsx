@@ -1,5 +1,6 @@
 import BannerText from "@/components/Home/BannerText";
 import LayoutCard from "@/components/Home/LayoutCard";
+import Posts from "@/components/Home/Posts";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -137,6 +138,7 @@ export default function Home() {
         </div>
       </article>
       <BannerText />
+      <Posts/>
     </section>
   );
 }
